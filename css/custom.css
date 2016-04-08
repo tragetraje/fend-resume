@@ -1,0 +1,99 @@
+#override h4 {
+  letter-spacing: 1px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+#override b {
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+#override .education-entry {
+  margin-bottom: 20px;
+}
+#override .project-entry {
+  margin-bottom: 30px;
+}
+#override .work-entry {
+  margin-bottom: 30px;
+}
+
+#override .description {
+  line-height: 1.5em;
+  padding-top: 3px;
+}
+
+#override .experience-description {
+  line-height: 1.5em;
+  padding-top: 3px;
+  padding-bottom: 30px;
+}
+
+#override hr {
+  height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #777 inset;
+}
+
+#override .btn {
+  margin-right: 10px;
+  margin-bottom: 20px;
+  color: dodgerblue;
+  border-color: dodgerblue;
+}
+
+#override .first-name {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+#role {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+#override .glyphicon {
+  padding-right: 5px;
+  color: #777;
+}
+
+#override .contact-item {
+  padding-right: 50px;
+}
+
+#override .entry-date {
+margin-bottom: 10px;
+}
+
+#override .link-color {
+  color: dodgerblue;
+}
+
+#override .resume {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#override .footer {
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+/*
+@media (min-width: 768px) {
+    .column1, .column2 {width:50%;}
+}
+*/
+
+@media (max-width: 768px) {
+  #override .header {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zina's Resume</title>
+    <link href="css/custom.css" rel="stylesheet">
+    <script src="js/jQuery.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="js/helper.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+  </head>
+  <body id="override">
+    <div class="header container">
+      <div class="row">
+        <!-- Name, role, welcome message and contacts-->
+        <div id="header" class="header-info">
+          <ul id="topContacts" class="contact-list list-unstyled list-inline"></ul>
+        </div>
+      </div>
+    </div><!-- End of 1st container -->
+    <hr>
+    <div class="container">
+      <div class="row">
+        <!--Projects and Work Experience -->
+        <div class="column1 col-lg-6 col-lg-push-6">
+            <h4>Projects</h4>
+              <div id="projects">
+              </div>
+            <h4>Experience</h4>
+              <div id="workExperience">
+              </div>
+        </div><!-- End of column-->
+        <!--Skills, languages and education column -->
+        <div class="column2 col-lg-6 col-lg-pull-6">
+            <h4>Skills</h4>
+              <ul id="skills"  class="list-unstyled">
+              </ul>
+            <h4>Languages</h4>
+              <div id="languages">
+              </div>
+            <h4>Education</h4>
+              <div id="education">
+              </div>
+        </div><!-- End of column-->
+      </div>
+        <div class="row">
+          <div class="text-center col-lg-12">
+            <a class="resume link-color" href="Zina_Astafyeva_Resume.pdf"><b>Zina_Astafyeva_Resume.pdf</b></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+              <div id="mapDiv">
+                <h4>Where I've Lived and Worked</h4>
+              </div>
+          </div>
+        </div><!-- End of row -->
+    </div><!-- End of 2nd container -->
+      <hr>
+    <div class="container">
+      <footer class="footer">
+        <ul id="footerContacts" class="list-unstyled list-inline">
+        </ul>
+      </footer>
+    </div><!-- End of last container -->
+
+
+    <script src="js/resumeBuilder.js"></script>
+    <!--
+    <script type="text/javascript">
+      if(document.getElementsByClassName('flex-item').length === 0) {
+        document.getElementById('topContacts').style.display = 'none';
+      }
+      if(document.getElementsByTagName('h4').length === 0) {
+        document.getElementById('header').style.display = 'none';
+      }
+      if(document.getElementsByClassName('work-entry').length === 0) {
+        document.getElementById('workExperience').style.display = 'none';
+      }
+      if(document.getElementsByClassName('project-entry').length === 0) {
+        document.getElementById('projects').style.display = 'none';
+      }
+      if(document.getElementsByClassName('education-entry').length === 0) {
+        document.getElementById('education').style.display = 'none';
+      }
+      if(document.getElementsByClassName('flex-item').length === 0) {
+        document.getElementById('lets-connect').style.display = 'none';
+      }
+      if(document.getElementById('map') === null) {
+        document.getElementById('mapDiv').style.display = 'none';
+      }
+    </script> -->
+  </body>
+</html>
