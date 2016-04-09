@@ -75,6 +75,18 @@ margin-bottom: 10px;
   padding-bottom: 20px;
 }
 
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  padding: 0 0 5% 0;
+}
+
+#map {
+  display: block;
+  height: 100%;
+  margin: 0 5%;
+}
+
 #override .footer {
   padding-bottom: 20px;
   font-weight: bold;
