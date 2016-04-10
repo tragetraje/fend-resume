@@ -1,3 +1,4 @@
+/* General styles */
 #override h4 {
   letter-spacing: 1px;
   margin-top: 30px;
@@ -12,6 +13,33 @@
 }
 
 
+#override .link-color {
+  color: dodgerblue;
+}
+
+
+#override hr {
+  height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #777 inset;
+}
+
+
+#override .btn {
+  margin-right: 10px;
+  margin-bottom: 20px;
+  color: dodgerblue;
+  border-color: dodgerblue;
+}
+
+
+#override .glyphicon {
+  padding-right: 5px;
+  color: #777;
+}
+
+
+/* Skills, Education, Project, Experience sections */
 #override .education-entry {
   margin-bottom: 20px;
 }
@@ -36,21 +64,6 @@
 }
 
 
-#override hr {
-  height: 10px;
-	border: 0;
-	box-shadow: 0 10px 10px -10px #777 inset;
-}
-
-
-#override .btn {
-  margin-right: 10px;
-  margin-bottom: 20px;
-  color: dodgerblue;
-  border-color: dodgerblue;
-}
-
-
 #override .first-name {
   margin-top: 30px;
   margin-bottom: 0;
@@ -60,12 +73,6 @@
 #role {
   margin-top: 0px;
   margin-bottom: 20px;
-}
-
-
-#override .glyphicon {
-  padding-right: 5px;
-  color: #777;
 }
 
 
@@ -79,17 +86,19 @@ margin-bottom: 10px;
 }
 
 
-#override .link-color {
-  color: dodgerblue;
-}
-
-
+/* The link to .pdf resume and the footer */
 #override .resume {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 
+#override .footer {
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Displaying the Google Map */
 #mapDiv {
   height: 400px;
   width: 100%;
@@ -101,12 +110,6 @@ margin-bottom: 10px;
   display: block;
   height: 100%;
   margin: 0 5%;
-}
-
-
-#override .footer {
-  padding-bottom: 20px;
-  font-weight: bold;
 }
 
 
