@@ -4,26 +4,30 @@
   margin-bottom: 20px;
 }
 
+
 #override b {
   font-size: 16px;
   letter-spacing: 1px;
   margin-bottom: 30px;
 }
 
+
 #override .education-entry {
   margin-bottom: 20px;
 }
-#override .project-entry {
-  margin-bottom: 30px;
-}
+
+
+#override .project-entry,
 #override .work-entry {
   margin-bottom: 30px;
 }
+
 
 #override .description {
   line-height: 1.5em;
   padding-top: 3px;
 }
+
 
 #override .experience-description {
   line-height: 1.5em;
@@ -31,11 +35,13 @@
   padding-bottom: 30px;
 }
 
+
 #override hr {
   height: 10px;
 	border: 0;
 	box-shadow: 0 10px 10px -10px #777 inset;
 }
+
 
 #override .btn {
   margin-right: 10px;
@@ -44,36 +50,45 @@
   border-color: dodgerblue;
 }
 
+
 #override .first-name {
   margin-top: 30px;
   margin-bottom: 0;
 }
 
+
 #role {
   margin-top: 0px;
   margin-bottom: 20px;
 }
+
+
 #override .glyphicon {
   padding-right: 5px;
   color: #777;
 }
 
+
 #override .contact-item {
   padding-right: 50px;
 }
+
 
 #override .entry-date {
 margin-bottom: 10px;
 }
 
+
 #override .link-color {
   color: dodgerblue;
 }
+
 
 #override .resume {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
 
 #mapDiv {
   height: 400px;
@@ -81,28 +96,29 @@ margin-bottom: 10px;
   padding: 0 0 5% 0;
 }
 
+
 #map {
   display: block;
   height: 100%;
   margin: 0 5%;
 }
 
+
 #override .footer {
   padding-bottom: 20px;
   font-weight: bold;
 }
+
+
 /* Customize container */
 @media (min-width: 768px) {
   .container {
     max-width: 730px;
   }
 }
-/*
-@media (min-width: 768px) {
-    .column1, .column2 {width:50%;}
-}
-*/
 
+
+/* New margins added for displaying on smaller screens */
 @media (max-width: 768px) {
   #override .header {
     margin-left: 15px;
