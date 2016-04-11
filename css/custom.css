@@ -14,7 +14,7 @@
 
 
 #override .link-color {
-  color: dodgerblue;
+  color: #1e90ff;
 }
 
 
@@ -28,8 +28,8 @@
 #override .btn {
   margin-right: 10px;
   margin-bottom: 20px;
-  color: dodgerblue;
-  border-color: dodgerblue;
+  color: #1e90ff;
+  border-color: #1e90ff;
 }
 
 
