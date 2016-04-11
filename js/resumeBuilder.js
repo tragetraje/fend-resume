@@ -1,26 +1,29 @@
-
-var bio = {
+bio = {
     "name": "Zina Astafyeva",
     "role": "Front-End Web Developer Nanodegree Student",
     "contacts": {
         "email": "z.a.astafyeva@gmail.com",
+        "mobile": "0401 333 222",
         "linkedin": "https://au.linkedin.com/pub/zina-astafyeva/40/368/248",
         "github": "https://github.com/tragetraje",
         "location": "Newcastle, Australia"
     },
-    "welcomeMsg": "A telecom engineer transitioned to Front-End Web developer. Obsessed with web development. Curious about visual aesthetics of everyday things. Check out my GitHub and LinkedIn.",
+    "welcomeMessage": "A telecom engineer transitioned to Front-End Web developer. Obsessed with web development. Curious about visual aesthetics of everyday things. Check out my GitHub and LinkedIn.",
     "skills": ["Programming languages: HTML5, CSS3, JavaScript", "Frameworks, IDEs: jQuery, Bootstrap, Atom, Grunt", "Version Control System: Git"],
-    "languages": "Fluent in: Spanish and Russian"
+    "languages": "Fluent in: Spanish and Russian",
+    "biopic": "images/me.jpg"
 };
 
 //Display Bio JSON function;
 
-function displayBio() {
+bio.display = function() {
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-    var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
+    var formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
+    var formattedWelcomeMessage = HTMLwelcomeMessage.replace("%data%", bio.welcomeMessage);
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
     var formattedEmail = HTMLemail.replace("#", bio.contacts.email).replace("%data%", bio.contacts.email);
+    var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
     var formattedLinkedin = HTMLlinkedin.replace("#", bio.contacts.linkedin);
     var formattedGithub = HTMLgithub.replace("#", bio.contacts.github);
     var formattedLanguages = HTMLlanguages.replace("%data%", bio.languages);
@@ -29,8 +32,11 @@ function displayBio() {
     $("#header").prepend(formattedWelcomeMessage);
     $("#header").prepend(formattedRole);
     $("#header").prepend(formattedName);
+    $("#header").prepend(formattedBiopic);
     $("#topContacts").append(formattedLocation);
+    $("#footerContacts").append(formattedMobile);
     $("#topContacts, #footerContacts").append(formattedEmail);
+
     $("#footerContacts").append(formattedLinkedin);
     $("#footerContacts").append(formattedGithub);
 
@@ -41,9 +47,9 @@ function displayBio() {
     }
 
     $("#languages").append(HTMLlanguages.replace("%data%", bio.languages));
-}
+};
 
-displayBio();
+bio.display();
 
 //Education JSON
 
@@ -52,44 +58,48 @@ var education = {
         "name": "Saint-Petersburg Electrotechnical University",
         "url": "http://www.eltech.ru/en/university",
         "location": "Russia",
-        "degree": "Electrical Engineer",
+        "degree": "Engineering",
+        "majors": "Electrical Engineer",
         "dates": "2007"
     }],
     "onlineCourses": [{
         "title": "Front-End Web Developer Nanodegree",
         "school": "Udacity",
-        "dates": "2016",
+        "date": "2016",
         "url": "www.udacity.com/nanodegree-classic"
     }, {
         "title": "Fundamentals of JavaScript",
         "school": "CodeCademy",
-        "dates": "2016",
+        "date": "2016",
         "url": "www.codecademy.com/learn/javascript"
     }]
 };
 
 //Display Education JSON function;
 
-function displayEducation() {
-    for (var schools in education.schools) {
-        $('#education').append(HTMLschoolStart);
-        $('.education-entry:last').append(HTMLschoolName.replace("%data%", education.schools[schools].name).replace("#", education.schools[schools].url))
-            .append(HTMLschoolLocation.replace("%data%", education.schools[schools].location))
-            .append(HTMLschoolDegree.replace("%data%", education.schools[schools].degree))
-            .append(HTMLschoolDates.replace("%data%", education.schools[schools].dates));
-        //$('.education-entry:last').append(formattedSchoolDegree);
-        //$('.education-entry:last').append(formattedSchoolDates);
-    }
+education.display = function() {
+    var name, location, majors, dates, url, title, school, date;
+    education.schools.forEach(addUni);
     $("#education").append(HTMLonlineClasses);
-    for (var school in education.onlineCourses) {
-        $("#education").append(HTMLschoolStart);
-        $(".education-entry:last").append(HTMLonlineSchool.replace("%data%", education.onlineCourses[school].school).replace("#", education.onlineCourses[school].url))
-            .append(HTMLonlineTitle.replace("%data%", education.onlineCourses[school].title))
-            .append(HTMLonlineDates.replace("%data%", education.onlineCourses[school].dates));
-    }
-}
+    education.onlineCourses.forEach(addOnlineCourse);
 
-displayEducation();
+    function addUni(school) {
+        $('#education').append(HTMLschoolStart);
+        $('.education-entry:last').append(HTMLschoolName.replace("%data%", school.name).replace("#", school.url))
+            .append(HTMLschoolLocation.replace("%data%", school.location))
+            .append(HTMLschoolMajors.replace("%data%", school.majors))
+            .append(HTMLschoolDates.replace("%data%", school.dates));
+    }
+
+    function addOnlineCourse(course) {
+        $("#education").append(HTMLschoolStart);
+        $(".education-entry:last").append(HTMLonlineSchool.replace("%data%", course.school).replace("#", course.url))
+            .append(HTMLonlineTitle.replace("%data%", course.title))
+            .append(HTMLonlineDates.replace("%data%", course.date));
+    }
+};
+
+education.display();
 
 //Work JSON
 
@@ -111,18 +121,20 @@ var work = {
 
 //Display Work JSON function;
 
-function displayWork() {
-    for (var job in work.jobs) {
+work.display = function() {
+    var employer, title, location, dates, description;
+    work.jobs.forEach(addWorkPlace);
+    function addWorkPlace(job) {
         $("#workExperience").append(HTMLworkStart);
-        $(".work-entry:last").append(HTMLworkTitle.replace("%data%", work.jobs[job].title))
-            .append(HTMLworkEmployer.replace("%data%", work.jobs[job].employer))
-            .append(HTMLworkLocation.replace("%data%", work.jobs[job].location))
-            .append(HTMLworkDates.replace("%data%", work.jobs[job].dates))
-            .append(HTMLworkDescription.replace("%data%", work.jobs[job].description));
+        $(".work-entry:last").append(HTMLworkTitle.replace("%data%", job.title))
+            .append(HTMLworkEmployer.replace("%data%", job.employer))
+            .append(HTMLworkLocation.replace("%data%", job.location))
+            .append(HTMLworkDates.replace("%data%", job.dates))
+            .append(HTMLworkDescription.replace("%data%", job.description));
     }
-}
+};
 
-displayWork();
+work.display();
 
 //Projects JSON
 
@@ -130,31 +142,36 @@ var projects = {
     "projects": [{
         "title": "Interactive Resume",
         "dates": "March, 2016",
-        "view": "www",
+        "view": "tragetraje.github.io/fend-resume",
         "github": "https://github.com/tragetraje/fend-resume",
-        "description": "An interactive resume site to showcase my projects and its progress while studying for a nanodegree. JavaScript/jQuery and Bootstrap were used to interactively display the sections of the resume."
+        "description": "An interactive resume site to showcase my projects and its progress while studying for a nanodegree. JavaScript/jQuery and Bootstrap were used to interactively display the sections of the resume.",
+        "images": "images/project.jpg"
     }, {
         "title": "Portfolio Site",
         "dates": "February, 2016",
         "view": "http://tragetraje.github.io/",
         "github": "https://github.com/tragetraje/tragetraje.github.io",
-        "description": "A static single-page, responsive site using HTML, CSS and Bootstrap. User can view contact information and my recent projects, hosted on GitHub pages."
+        "description": "A static single-page, responsive site using HTML, CSS and Bootstrap. User can view contact information and my recent projects, hosted on GitHub pages.",
+        "images": "images/project.jpg"
     }]
 };
 
-function displayProjects() {
-    for (var project in projects.projects) {
+projects.display = function() {
+  var title, dates, view, github, description;
+    projects.projects.forEach(addProject);
+    function addProject(project) {
         $("#projects").append(HTMLprojectStart);
         $(".project-entry:last").append(HTMLprojectTitle.replace("%data%",
-                projects.projects[project].title))
-            .append(HTMLprojectDates.replace("%data%", projects.projects[project].dates))
-            .append(HTMLprojectDescription.replace("%data%", projects.projects[project].description));
-        if (projects.projects[project].view !== undefined)
-            $(".project-entry:last").append(HTMLprojectView.replace("#", projects.projects[project].view));
-        if (projects.projects[project].github !== undefined)
-            $(".project-entry:last").append(HTMLprojectGithub.replace("#", projects.projects[project].github));
+                project.title))
+            .append(HTMLprojectDates.replace("%data%", project.dates))
+            .append(HTMLprojectDescription.replace("%data%", project.description));
+        if (project.view !== undefined)
+            $(".project-entry:last").append(HTMLprojectView.replace("#", project.view));
+        if (project.github !== undefined)
+            $(".project-entry:last").append(HTMLprojectGithub.replace("#", project.github));
     }
-}
-displayProjects();
+};
+
+projects.display();
 
 $("#mapDiv").append(googleMap);
