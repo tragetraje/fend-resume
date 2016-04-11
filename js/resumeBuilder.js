@@ -1,3 +1,5 @@
+
+//Display Bio JSON;
 bio = {
     "name": "Zina Astafyeva",
     "role": "Front-End Web Developer Nanodegree Student",
@@ -11,47 +13,44 @@ bio = {
     "welcomeMessage": "A telecom engineer transitioned to Front-End Web developer. Obsessed with web development. Curious about visual aesthetics of everyday things. Check out my GitHub and LinkedIn.",
     "skills": ["Programming languages: HTML5, CSS3, JavaScript", "Frameworks, IDEs: jQuery, Bootstrap, Atom, Grunt", "Version Control System: Git"],
     "languages": "Fluent in: Spanish and Russian",
-    "biopic": "images/me.jpg"
-};
+    "biopic": "images/me.jpg",
 
-//Display Bio JSON function;
-
-bio.display = function() {
-    var formattedName = HTMLheaderName.replace("%data%", bio.name);
-    var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-    var formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
-    var formattedWelcomeMessage = HTMLwelcomeMessage.replace("%data%", bio.welcomeMessage);
-    var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-    var formattedEmail = HTMLemail.replace("#", bio.contacts.email).replace("%data%", bio.contacts.email);
-    var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-    var formattedLinkedin = HTMLlinkedin.replace("#", bio.contacts.linkedin);
-    var formattedGithub = HTMLgithub.replace("#", bio.contacts.github);
-    var formattedLanguages = HTMLlanguages.replace("%data%", bio.languages);
+    display: function() {
+        var formattedName = HTMLheaderName.replace("%data%", bio.name);
+        var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+        var formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
+        var formattedWelcomeMessage = HTMLwelcomeMessage.replace("%data%", bio.welcomeMessage);
+        var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+        var formattedEmail = HTMLemail.replace("#", bio.contacts.email).replace("%data%", bio.contacts.email);
+        var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+        var formattedLinkedin = HTMLlinkedin.replace("#", bio.contacts.linkedin);
+        var formattedGithub = HTMLgithub.replace("#", bio.contacts.github);
+        var formattedLanguages = HTMLlanguages.replace("%data%", bio.languages);
 
 
-    $("#header").prepend(formattedWelcomeMessage);
-    $("#header").prepend(formattedRole);
-    $("#header").prepend(formattedName);
-    $("#header").prepend(formattedBiopic);
-    $("#topContacts").append(formattedLocation);
-    $("#footerContacts").append(formattedMobile);
-    $("#topContacts, #footerContacts").append(formattedEmail);
+        $("#header").prepend(formattedWelcomeMessage);
+        $("#header").prepend(formattedRole);
+        $("#header").prepend(formattedName);
+        $("#header").prepend(formattedBiopic);
+        $("#topContacts").append(formattedLocation);
+        $("#footerContacts").append(formattedMobile);
+        $("#topContacts, #footerContacts").append(formattedEmail);
 
-    $("#footerContacts").append(formattedLinkedin);
-    $("#footerContacts").append(formattedGithub);
+        $("#footerContacts").append(formattedLinkedin);
+        $("#footerContacts").append(formattedGithub);
 
-    if (bio.skills.length > 0) {
-        for (var i = 0; i < bio.skills.length; i++) {
-            $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
+        if (bio.skills.length > 0) {
+            for (var i = 0; i < bio.skills.length; i++) {
+                $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
+            }
         }
+        $("#languages").append(HTMLlanguages.replace("%data%", bio.languages));
     }
-
-    $("#languages").append(HTMLlanguages.replace("%data%", bio.languages));
 };
 
 bio.display();
 
-//Education JSON
+//Display Education JSON;
 
 var education = {
     "schools": [{
@@ -72,36 +71,33 @@ var education = {
         "school": "CodeCademy",
         "date": "2016",
         "url": "www.codecademy.com/learn/javascript"
-    }]
-};
+    }],
+    display: function() {
+        var name, location, majors, dates, url, title, school, date;
+        education.schools.forEach(addUni);
+        $("#education").append(HTMLonlineClasses);
+        education.onlineCourses.forEach(addOnlineCourse);
 
-//Display Education JSON function;
+        function addUni(school) {
+            $('#education').append(HTMLschoolStart);
+            $('.education-entry:last').append(HTMLschoolName.replace("%data%", school.name).replace("#", school.url))
+                .append(HTMLschoolLocation.replace("%data%", school.location))
+                .append(HTMLschoolMajors.replace("%data%", school.majors))
+                .append(HTMLschoolDates.replace("%data%", school.dates));
+        }
 
-education.display = function() {
-    var name, location, majors, dates, url, title, school, date;
-    education.schools.forEach(addUni);
-    $("#education").append(HTMLonlineClasses);
-    education.onlineCourses.forEach(addOnlineCourse);
-
-    function addUni(school) {
-        $('#education').append(HTMLschoolStart);
-        $('.education-entry:last').append(HTMLschoolName.replace("%data%", school.name).replace("#", school.url))
-            .append(HTMLschoolLocation.replace("%data%", school.location))
-            .append(HTMLschoolMajors.replace("%data%", school.majors))
-            .append(HTMLschoolDates.replace("%data%", school.dates));
-    }
-
-    function addOnlineCourse(course) {
-        $("#education").append(HTMLschoolStart);
-        $(".education-entry:last").append(HTMLonlineSchool.replace("%data%", course.school).replace("#", course.url))
-            .append(HTMLonlineTitle.replace("%data%", course.title))
-            .append(HTMLonlineDates.replace("%data%", course.date));
+        function addOnlineCourse(course) {
+            $("#education").append(HTMLschoolStart);
+            $(".education-entry:last").append(HTMLonlineSchool.replace("%data%", course.school).replace("#", course.url))
+                .append(HTMLonlineTitle.replace("%data%", course.title))
+                .append(HTMLonlineDates.replace("%data%", course.date));
+        }
     }
 };
 
 education.display();
 
-//Work JSON
+//Display Work JSON;
 
 var work = {
     "jobs": [{
@@ -116,27 +112,25 @@ var work = {
         "location": "Madrid, Spain",
         "dates": "September 2011 - August 2013",
         "description": "Collaborated in commercial launch of 2 Android OS mobile clients in Spain and Germany. Designed and executed a variety of test sets required for productive release."
-    }]
-};
+    }],
+    display: function() {
+        var employer, title, location, dates, description;
+        work.jobs.forEach(addWorkPlace);
 
-//Display Work JSON function;
-
-work.display = function() {
-    var employer, title, location, dates, description;
-    work.jobs.forEach(addWorkPlace);
-    function addWorkPlace(job) {
-        $("#workExperience").append(HTMLworkStart);
-        $(".work-entry:last").append(HTMLworkTitle.replace("%data%", job.title))
-            .append(HTMLworkEmployer.replace("%data%", job.employer))
-            .append(HTMLworkLocation.replace("%data%", job.location))
-            .append(HTMLworkDates.replace("%data%", job.dates))
-            .append(HTMLworkDescription.replace("%data%", job.description));
+        function addWorkPlace(job) {
+            $("#workExperience").append(HTMLworkStart);
+            $(".work-entry:last").append(HTMLworkTitle.replace("%data%", job.title))
+                .append(HTMLworkEmployer.replace("%data%", job.employer))
+                .append(HTMLworkLocation.replace("%data%", job.location))
+                .append(HTMLworkDates.replace("%data%", job.dates))
+                .append(HTMLworkDescription.replace("%data%", job.description));
+        }
     }
 };
 
 work.display();
 
-//Projects JSON
+//Display Projects JSON;
 
 var projects = {
     "projects": [{
@@ -153,25 +147,27 @@ var projects = {
         "github": "https://github.com/tragetraje/tragetraje.github.io",
         "description": "A static single-page, responsive site using HTML, CSS and Bootstrap. User can view contact information and my recent projects, hosted on GitHub pages.",
         "images": "images/project.jpg"
-    }]
-};
+    }],
+    display: function() {
+        var title, dates, view, github, description;
+        projects.projects.forEach(addProject);
 
-projects.display = function() {
-  var title, dates, view, github, description;
-    projects.projects.forEach(addProject);
-    function addProject(project) {
-        $("#projects").append(HTMLprojectStart);
-        $(".project-entry:last").append(HTMLprojectTitle.replace("%data%",
-                project.title))
-            .append(HTMLprojectDates.replace("%data%", project.dates))
-            .append(HTMLprojectDescription.replace("%data%", project.description));
-        if (project.view !== undefined)
-            $(".project-entry:last").append(HTMLprojectView.replace("#", project.view));
-        if (project.github !== undefined)
-            $(".project-entry:last").append(HTMLprojectGithub.replace("#", project.github));
+        function addProject(project) {
+            $("#projects").append(HTMLprojectStart);
+            $(".project-entry:last").append(HTMLprojectTitle.replace("%data%",
+                    project.title))
+                .append(HTMLprojectDates.replace("%data%", project.dates))
+                .append(HTMLprojectDescription.replace("%data%", project.description));
+            if (project.view !== undefined)
+                $(".project-entry:last").append(HTMLprojectView.replace("#", project.view));
+            if (project.github !== undefined)
+                $(".project-entry:last").append(HTMLprojectGithub.replace("#", project.github));
+        }
     }
 };
 
 projects.display();
+
+//Display Google Map;
 
 $("#mapDiv").append(googleMap);
