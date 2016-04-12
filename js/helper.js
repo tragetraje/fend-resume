@@ -1,9 +1,10 @@
-
 var HTMLheaderName = '<h3 id="name" class="first-name">%data%</h3>';
 var HTMLheaderRole = '<h3 id="role"><small>%data%</small></h3>';
-var HTMLwelcomeMsg = '<p class="lead">%data%</p>';
+
+var HTMLwelcomeMessage = '<p class="lead">%data%</p>';
 var HTMLlocation = '<li class="contact-item"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>%data%</li>';
 var HTMLemail = '<li class="contact-item"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a class="link-color" href="mailto:#">%data%</a></li>';
+var HTMLmobile = '<li class="contact-item"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>%data%</li>';
 var HTMLlinkedin = '<li class="contact-item"><a class="link-color" href="#">LinkedIn</li>';
 var HTMLgithub = '<li class="contact-item"><a class="link-color" href="#">GitHub</li>';
 
@@ -13,7 +14,7 @@ var HTMLlanguages = '<p id="languages">%data%</p>';
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<span class="entry-name"><a class="link-color" href="#">%data%</a><span>';
 var HTMLschoolLocation = '<span class="link-color entry-name">, %data%<span>';
-var HTMLschoolDegree = '<div>%data%</div>';
+var HTMLschoolMajors = '<div>%data%</div>';
 var HTMLschoolDates = '<div class="entry-date">%data%</div>';
 
 var HTMLonlineClasses = '<b class="online-header">Online Classes</b>';

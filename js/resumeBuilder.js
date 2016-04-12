@@ -18,7 +18,6 @@ bio = {
     display: function() {
         var formattedName = HTMLheaderName.replace("%data%", bio.name);
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-        var formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
         var formattedWelcomeMessage = HTMLwelcomeMessage.replace("%data%", bio.welcomeMessage);
         var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
         var formattedEmail = HTMLemail.replace("#", bio.contacts.email).replace("%data%", bio.contacts.email);
@@ -31,7 +30,6 @@ bio = {
         $("#header").prepend(formattedWelcomeMessage);
         $("#header").prepend(formattedRole);
         $("#header").prepend(formattedName);
-        $("#header").prepend(formattedBiopic);
         $("#topContacts").append(formattedLocation);
         $("#footerContacts").append(formattedMobile);
         $("#topContacts, #footerContacts").append(formattedEmail);
