@@ -1,3 +1,4 @@
+/* var HTMLbioPic = '<img src="%data%" class="biopic" alt="my profile picture">'; */
 var HTMLheaderName = '<h3 id="name" class="first-name">%data%</h3>';
 var HTMLheaderRole = '<h3 id="role"><small>%data%</small></h3>';
 
@@ -14,7 +15,7 @@ var HTMLlanguages = '<p id="languages">%data%</p>';
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<span class="entry-name"><a class="link-color" href="#">%data%</a><span>';
 var HTMLschoolLocation = '<span class="link-color entry-name">, %data%<span>';
-var HTMLschoolMajors = '<div>%data%</div>';
+var HTMLschoolDegree = '<div>%data%</div>';
 var HTMLschoolDates = '<div class="entry-date">%data%</div>';
 
 var HTMLonlineClasses = '<b class="online-header">Online Classes</b>';

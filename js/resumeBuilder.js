@@ -55,8 +55,8 @@ var education = {
         "name": "Saint-Petersburg Electrotechnical University",
         "url": "http://www.eltech.ru/en/university",
         "location": "Russia",
-        "degree": "Engineering",
-        "majors": "Electrical Engineer",
+        "degree": "Electrical Engineer",
+        "majors": ["Electronics", "Microelectronics"],
         "dates": "2007"
     }],
     "onlineCourses": [{
@@ -71,7 +71,7 @@ var education = {
         "url": "www.codecademy.com/learn/javascript"
     }],
     display: function() {
-        var name, location, majors, dates, url, title, school, date;
+        var name, location, degree, dates, url, title, school, date;
         education.schools.forEach(addUni);
         $("#education").append(HTMLonlineClasses);
         education.onlineCourses.forEach(addOnlineCourse);
@@ -80,7 +80,7 @@ var education = {
             $('#education').append(HTMLschoolStart);
             $('.education-entry:last').append(HTMLschoolName.replace("%data%", school.name).replace("#", school.url))
                 .append(HTMLschoolLocation.replace("%data%", school.location))
-                .append(HTMLschoolMajors.replace("%data%", school.majors))
+                .append(HTMLschoolDegree.replace("%data%", school.degree))
                 .append(HTMLschoolDates.replace("%data%", school.dates));
         }
 
@@ -137,14 +137,14 @@ var projects = {
         "view": "tragetraje.github.io/fend-resume",
         "github": "https://github.com/tragetraje/fend-resume",
         "description": "An interactive resume site to showcase my projects and its progress while studying for a nanodegree. JavaScript/jQuery and Bootstrap were used to interactively display the sections of the resume.",
-        "images": "images/project.jpg"
+        "images": [ "images/project.jpg", "images/project-demo.jpg" ]
     }, {
         "title": "Portfolio Site",
         "dates": "February, 2016",
         "view": "http://tragetraje.github.io/",
         "github": "https://github.com/tragetraje/tragetraje.github.io",
         "description": "A static single-page, responsive site using HTML, CSS and Bootstrap. User can view contact information and my recent projects, hosted on GitHub pages.",
-        "images": "images/project.jpg"
+        "images": [ "images/project.jpg", "images/project-demo.jpg" ]
     }],
     display: function() {
         var title, dates, view, github, description;
