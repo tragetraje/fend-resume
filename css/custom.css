@@ -96,6 +96,7 @@ margin-bottom: 10px;
 #override .footer {
   padding-bottom: 20px;
   font-weight: bold;
+  text-align: center;
 }
 
 /* Displaying the Google Map */
