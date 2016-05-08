@@ -17,6 +17,10 @@
   color: #1e90ff;
 }
 
+#override .link-color:visited {
+  color: #5d77fb;
+}
+
 
 #override hr {
   height: 10px;

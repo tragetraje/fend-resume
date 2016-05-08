@@ -63,12 +63,12 @@ var education = {
         "title": "Front-End Web Developer Nanodegree",
         "school": "Udacity",
         "date": "2016",
-        "url": "www.udacity.com/nanodegree-classic"
+        "url": "https://www.udacity.com/nanodegree"
     }, {
         "title": "Fundamentals of JavaScript",
         "school": "CodeCademy",
         "date": "2016",
-        "url": "www.codecademy.com/learn/javascript"
+        "url": "https://www.codecademy.com/learn/javascript"
     }],
     display: function() {
         var name, location, degree, dates, url, title, school, date;
