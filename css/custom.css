@@ -13,14 +13,22 @@
 }
 
 
-#override .link-color {
+#override .link-color:link {
   color: #1e90ff;
 }
 
 #override .link-color:visited {
   color: #5d77fb;
 }
+/*
+#override .link-color:hover,
+#override .link-color:active,
+#override .link-color:focus,
+ {
+  color: #1eb6ff;
 
+}
+*/
 
 #override hr {
   height: 10px;
