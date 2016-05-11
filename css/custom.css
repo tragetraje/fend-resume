@@ -20,15 +20,17 @@
 #override .link-color:visited {
   color: #5d77fb;
 }
-/*
+
 #override .link-color:hover,
 #override .link-color:active,
-#override .link-color:focus,
+#override .link-color:focus
  {
+
   color: #1eb6ff;
+  text-decoration: none;
 
 }
-*/
+
 
 #override hr {
   height: 10px;

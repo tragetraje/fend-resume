@@ -11,7 +11,7 @@ bio = {
         "location": "Newcastle, Australia"
     },
     "welcomeMessage": "A telecom engineer transitioned to Front-End Web developer. Obsessed with web development. Curious about visual aesthetics of everyday things. Check out my GitHub and LinkedIn.",
-    "skills": ["Programming languages: HTML5, CSS3, JavaScript", "Frameworks, IDEs: jQuery, Bootstrap, Atom, Grunt", "Version Control System: Git"],
+    "skills": ["Programming languages: HTML5, CSS3, JavaScript", "Frameworks, IDEs: jQuery, Bootstrap, Grunt", "Version Control System: Git"],
     "languages": "Fluent in: Spanish and Russian",
     "biopic": "images/me.jpg",
 
@@ -131,19 +131,26 @@ work.display();
 //Display Projects JSON;
 
 var projects = {
-    "projects": [{
+    "projects": [
+      {   "title": "Classic Arcade Game Clone",
+          "dates": "April, 2016",
+          "view": "http://tragetraje.github.io/fend-arcade-game/",
+          "github": "https://github.com/tragetraje/fend-arcade-game",
+          "description": "Using Object-Oriented JavaScript, I implemented the player and enemy classes, function to detect the collision of the entities and handleInput method which makes the player move according to that input. Visual assets and game engine was provided.",
+          "images": [ "images/project.jpg", "images/project-demo.jpg" ]
+      }, {
         "title": "Interactive Resume",
         "dates": "March, 2016",
-        "view": "tragetraje.github.io/fend-resume",
-        "github": "https://github.com/tragetraje/fend-resume",
-        "description": "An interactive resume site to showcase my projects and its progress while studying for a nanodegree. JavaScript/jQuery and Bootstrap were used to interactively display the sections of the resume.",
+        "view": "http://tragetraje.github.io/",
+        "github": "https://github.com/tragetraje/tragetraje.github.io",
+        "description": "An interactive resume site to showcase my projects and its progress while studying for a nanodegree. I created JSON-objects representing my skills, education, work experience and web projects, JavaScript/jQuery was used to interactively display the sections of the resume.",
         "images": [ "images/project.jpg", "images/project-demo.jpg" ]
     }, {
         "title": "Portfolio Site",
         "dates": "February, 2016",
-        "view": "http://tragetraje.github.io/",
-        "github": "https://github.com/tragetraje/tragetraje.github.io",
-        "description": "A static single-page, responsive site using HTML, CSS and Bootstrap. User can view contact information and my recent projects, hosted on GitHub pages.",
+        "view": "http://tragetraje.github.io/fend-portfolio",
+        "github": "https://github.com/tragetraje/fend-portfolio",
+        "description": "A static single-page, responsive site using HTML, CSS and Bootstrap. User can view contact information and my recent projects, hosted on GitHub pages. I've set up Grunt task-runner for this project to get responsive images for any viewport size",
         "images": [ "images/project.jpg", "images/project-demo.jpg" ]
     }],
     display: function() {
