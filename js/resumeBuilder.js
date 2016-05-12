@@ -136,7 +136,7 @@ var projects = {
           "dates": "April, 2016",
           "view": "http://tragetraje.github.io/fend-arcade-game/",
           "github": "https://github.com/tragetraje/fend-arcade-game",
-          "description": "Using Object-Oriented JavaScript, I implemented the player and enemy classes, function to detect the collision of the entities and handleInput method which makes the player move according to that input. Visual assets and game engine was provided.",
+          "description": "My task was to create a clone of classic JavaScript Arcade Game Frogger. Using Object-Oriented JavaScript, I implemented the player and enemy classes, function to detect the collision of the entities and handleInput method which makes the player move according to keyboard input. Visual assets and game engine was provided.",
           "images": [ "images/project.jpg", "images/project-demo.jpg" ]
       }, {
         "title": "Interactive Resume",
@@ -150,7 +150,7 @@ var projects = {
         "dates": "February, 2016",
         "view": "http://tragetraje.github.io/fend-portfolio",
         "github": "https://github.com/tragetraje/fend-portfolio",
-        "description": "A static single-page, responsive site using HTML, CSS and Bootstrap. User can view contact information and my recent projects, hosted on GitHub pages. I've set up Grunt task-runner for this project to get responsive images for any viewport size",
+        "description": "A static single-page, responsive site using HTML, CSS and Bootstrap. User can view contact information and my recent projects, hosted on GitHub pages. I've set up Grunt task-runner for this project to scale the images for different viewport sizes",
         "images": [ "images/project.jpg", "images/project-demo.jpg" ]
     }],
     display: function() {
