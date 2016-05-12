@@ -13,7 +13,6 @@ bio = {
     "welcomeMessage": "A telecom engineer transitioned to Front-End Web developer. Obsessed with web development. Curious about visual aesthetics of everyday things. Check out my GitHub and LinkedIn.",
     "skills": ["Programming languages: HTML5, CSS3, JavaScript", "Frameworks, IDEs: jQuery, Bootstrap, Grunt", "Version Control System: Git"],
     "languages": "Fluent in: Spanish and Russian",
-    "biopic": "images/me.jpg",
 
     display: function() {
         var formattedName = HTMLheaderName.replace("%data%", bio.name);
