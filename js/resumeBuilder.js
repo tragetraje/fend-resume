@@ -141,13 +141,13 @@ var projects = {
         "dates": "March, 2016",
         "view": "http://tragetraje.github.io/",
         "github": "https://github.com/tragetraje/tragetraje.github.io",
-        "description": "An interactive resume site to showcase my projects and its progress while studying for a nanodegree. I created JSON-objects representing my skills, education, work experience and web projects, JavaScript/jQuery was used to interactively display the sections of the resume." ]
+        "description": "An interactive resume site to showcase my projects and its progress while studying for a nanodegree. I created JSON-objects representing my skills, education, work experience and web projects, JavaScript/jQuery was used to interactively display the sections of the resume."
     }, {
         "title": "Portfolio Site",
         "dates": "February, 2016",
         "view": "http://tragetraje.github.io/fend-portfolio",
         "github": "https://github.com/tragetraje/fend-portfolio",
-        "description": "A static single-page, responsive site using HTML, CSS and Bootstrap. User can view contact information and my recent projects, hosted on GitHub pages. I've set up Grunt task-runner for this project to scale the images for different viewport sizes" ]
+        "description": "A static single-page, responsive site using HTML, CSS and Bootstrap. User can view contact information and my recent projects, hosted on GitHub pages. I've set up Grunt task-runner for this project to scale the images for different viewport sizes"
     }],
     display: function() {
         var title, dates, view, github, description;
