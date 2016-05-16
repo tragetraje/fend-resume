@@ -131,7 +131,13 @@ work.display();
 
 var projects = {
     "projects": [
-      {   "title": "Classic Arcade Game Clone",
+      {   "title": "Website Perfomance Optimization",
+          "dates": "May, 2016",
+          "view": "http://tragetraje.github.io/fend-optimization",
+          "github": "https://github.com/tragetraje/fend-optimization",
+          "description": "..."
+      },{
+        "title": "Classic Arcade Game Clone",
           "dates": "April, 2016",
           "view": "http://tragetraje.github.io/fend-arcade-game/",
           "github": "https://github.com/tragetraje/fend-arcade-game",
