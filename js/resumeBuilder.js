@@ -10,7 +10,7 @@ bio = {
         "github": "https://github.com/tragetraje",
         "location": "Newcastle, Australia"
     },
-    "welcomeMessage": "A telecom engineer transitioned to Front-End Web developer. A problem solver and lifetime learner. Curious about visual aesthetics of everyday things. Check out my GitHub and LinkedIn.",
+    "welcomeMessage": "A telecom engineer transitioned to Front-End Web developer. A problem solver and lifelong learner. Curious about visual aesthetics of everyday things. Check out my GitHub and LinkedIn.",
     "skills": ["Programming languages: HTML5, CSS3, JavaScript", "Frameworks, IDEs: Knockout.js, jQuery, Grunt, Bootstrap", "Version Control System: Git"],
     "languages": "Fluent in: Spanish and Russian",
 
