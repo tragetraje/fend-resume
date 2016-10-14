@@ -5,13 +5,13 @@ bio = {
     "role": "Front-End Web Developer Nanodegree Student",
     "contacts": {
         "email": "z.a.astafyeva@gmail.com",
-        "mobile": "0401 333 222",
-        "linkedin": "https://au.linkedin.com/pub/zina-astafyeva/40/368/248",
+        "mobile": "0400 000 000",
+        "linkedin": "https://au.linkedin.com/in/zastafyeva",
         "github": "https://github.com/tragetraje",
         "location": "Newcastle, Australia"
     },
-    "welcomeMessage": "A telecom engineer transitioned to Front-End Web developer. Obsessed with web development. Curious about visual aesthetics of everyday things. Check out my GitHub and LinkedIn.",
-    "skills": ["Programming languages: HTML5, CSS3, JavaScript", "Frameworks, IDEs: jQuery, Bootstrap, Grunt", "Version Control System: Git"],
+    "welcomeMessage": "A telecom engineer transitioned to Front-End Web developer. A problem solver and lifetime learner. Curious about visual aesthetics of everyday things. Check out my GitHub and LinkedIn.",
+    "skills": ["Programming languages: HTML5, CSS3, JavaScript", "Frameworks, IDEs: Knockout.js, jQuery, Grunt, Bootstrap", "Version Control System: Git"],
     "languages": "Fluent in: Spanish and Russian",
 
     display: function() {
@@ -63,11 +63,6 @@ var education = {
         "school": "Udacity",
         "date": "2016",
         "url": "https://www.udacity.com/nanodegree"
-    }, {
-        "title": "Fundamentals of JavaScript",
-        "school": "CodeCademy",
-        "date": "2016",
-        "url": "https://www.codecademy.com/learn/javascript"
     }],
     display: function() {
         var name, location, degree, dates, url, title, school, date;
@@ -131,11 +126,23 @@ work.display();
 
 var projects = {
     "projects": [
+      {   "title": "Feedreader Testing",
+          "dates": "October, 2016",
+          "view": "https://tragetraje.github.io/fend-feedreader/",
+          "github": "https://github.com/tragetraje/fend-feedreader",
+          "description": "In this project I was given a web-based application that reads RSS feeds from four popular blogs on Web Development and outputs them in the main window. My task was to implement a series of test sets using JavaScript Testing Framework Jasmine to check the application logic, event handling and DOM manipulation."
+      },
+      {   "title": "Neighborhood Map",
+          "dates": "September, 2016",
+          "view": "http://tragetraje.github.io/fend-neighborhood-map",
+          "github": "https://github.com/tragetraje/fend-neighborhood-map",
+          "description": "A responsive single-page application featuring a street art map of Newcastle, Australia. Map displays street art locations' by default which can be filtered using text input box and searching for a particular artist and his work. Knockout.js, Google Maps API and Flickr API were used to build the project."
+      },
       {   "title": "Website Perfomance Optimization",
-          "dates": "May, 2016",
+          "dates": "July, 2016",
           "view": "http://tragetraje.github.io/fend-optimization",
           "github": "https://github.com/tragetraje/fend-optimization",
-          "description": "..."
+          "description": "Added a series of optimization techniques to make the page render as quickly as possible. Investigated the reasons which prevent the page from rendering at 60 frames per second and improved its performance by refactoring the JavaScript code. Used Grunt task runner to minify the files and images."
       },{
         "title": "Classic Arcade Game Clone",
           "dates": "April, 2016",
@@ -145,8 +152,8 @@ var projects = {
       }, {
         "title": "Interactive Resume",
         "dates": "March, 2016",
-        "view": "http://tragetraje.github.io/",
-        "github": "https://github.com/tragetraje/tragetraje.github.io",
+        "view": "http://tragetraje.github.io/fend-resume",
+        "github": "https://github.com/tragetraje/fend-resume",
         "description": "An interactive resume site to showcase my projects and its progress while studying for a nanodegree. I created JSON-objects representing my skills, education, work experience and web projects, JavaScript/jQuery was used to interactively display the sections of the resume."
     }, {
         "title": "Portfolio Site",
